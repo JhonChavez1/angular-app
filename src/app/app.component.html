@@ -4,7 +4,7 @@
 
 @if (visible) {
   <h2> {{title}} </h2>
-
+  <div>Total: {{counter}}</div>
   @if (users != undefined && users.length > 0) {
     <table>
       <thead>
@@ -29,6 +29,6 @@
   <h2>Lo sentimos no está disponible la página</h2>
 }
 
-<app-counter></app-counter>
+<app-counter [title]="subtitle" (counterEmit)="setCounter($counter)"></app-counter>
 
 

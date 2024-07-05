@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { CounterComponent } from './counter.component';
+import { CounterComponent } from '../../main.server';
 
 describe('CounterComponent', () => {
   let component: CounterComponent;

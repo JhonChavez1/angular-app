@@ -12,11 +12,17 @@ import { CounterComponent } from './counter/counter.component';
     imports: [CounterComponent, CommonModule, RouterOutlet]
 })
 export class AppComponent {
-  title: string = 'Hola mundo angular desde componente!!'; 
-  users: string[] = ['Pepe', 'Maria', 'Juan', 'Andres']; 
-  visible: boolean = false;
+  title:    string = 'Hola mundo angular desde componente!!'; 
+  subtitle: string = 'Contador con estado de sesión';
+  users:    string[] = ['Pepe', 'Maria', 'Juan', 'Andres']; 
+  visible:  boolean = false;
+  counter: number = 0
+
   setVisible(): void {
     this.visible = this.visible? false: true;
     console.log('Hemos hecho clic en setVisible');
   }
+}
+setCounter(counter: number): void{
+  this.counter = counter
 }
